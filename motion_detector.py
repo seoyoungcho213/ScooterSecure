@@ -58,7 +58,7 @@ def detect_motion(tim2):
     result = all(abs(int(value)) > MOTION_THRESHOLD for value in values[:-1])
     if (result == True):
         print("Motion detected!")
-        #5.2.3 if MOTION detected, NeoPixel to RED
+        # if MOTION detected, NeoPixel to RED
         np_power.value(1)
         np[0] = (255, 0, 0) 
         np.write()
